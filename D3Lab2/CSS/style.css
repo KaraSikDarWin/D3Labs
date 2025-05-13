@@ -1,0 +1,20 @@
+.setting {
+    display: flex;
+    gap: 20px;
+   flex-direction: row;
+}
+
+.setting div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    flex: 1;
+    min-width: 200px; 
+}
+
+.hd{
+    display: inline;
+}
+
+.hidden {
+    visibility: hidden;
+  }

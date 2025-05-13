@@ -1,0 +1,39 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+svg {
+    width: 800px;
+    height: 800px;
+}
+
+svg text {
+    font: 10px Verdana;
+}
+
+svg path, line {
+    fill: none;
+    stroke: #333333;
+    width: 1px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title> Трансформация и анимация</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="http://d3js.org/d3.v7.min.js"> </script>
+    <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/image.js"></script>
+    <script src="JavaScript/path.js"></script>
+  </head>
+  <body> 
+    <div class="setting">  
+        <form id="setting">
+          <div>
+            <p>Координаты рисунка<br>
+                <select id="forgraph" display = "none">
+                    <option value="1">По кругу</option>
+                    <option value="0">Буквой Г</option>
+                  </select><br>
+              <label for="cx" class="befanim">x: </label>
+              <input type="number" id="cx" value="300" max="600" min="0" class="befanim">
+              <label for="cx1" class="toggle befanim">до </label>
+              <input type="number" id="cx1" value="300" max="600" min="0" class="toggle befanim">
+              <br>
+              <label for="cy" class="befanim">y: </label>
+              <input type="number" id="cy" value="300" max="600" min="0" class="befanim">
+              <label for="cy1" class="toggle befanim">до: </label>
+              <input type="number" id="cy1" value="300" max="600" min="0" class="toggle befanim">
+            </p>
+          </div>
+          <div>
+            <p>Масштаб<br>
+              <label for="rx">по x: </label>
+              <input type="number" id="rx" value="2" max="600" min="0">
+              <label for="rx1" class="toggle">до: </label>
+              <input type="number" id="rx1" value="2" max="600" min="0" class="toggle">
+              <br>
+              <label for="ry">по y: </label>
+              <input type="number" id="ry" value="2" max="600" min="0">
+              <label for="ry1" class="toggle">до: </label>
+              <input type="number" id="ry1" value="2" max="600" min="0" class="toggle">
+            </p>
+          </div>
+          <div>
+            <p>Поворот<br>
+              <label for="rt">угол: </label>
+              <input type="number" id="rt" value="0" max="359" min="0">
+              <label for="rt1" class="toggle">до: </label>
+              <input type="number" id="rt1" value="0" max="359" min="0" class="toggle">
+            </p>
+          </div>
+          <div>
+            <p>Скорость анимации<br>
+              <label for="timean">сек: </label>
+              <input type="number" id="timean" value="6000" max="10000" min="0">
+          </div>
+          <p>
+            <input type="button" value="Нарисовать" id="drw" onclick="draw(this.form)">
+            <input type="button" value="Анимировать" id="anim" hidden="true">
+            <input type="button" value="Очистить" onclick="cleara()"><br>
+            <label for="an">Включить анимацию?</label>
+            <input id="an" type="checkbox" onchange="toggleElements(this.checked)">
+            <select id="inter">
+                <option value="0">Линейное</option>
+                <option value="1">Эластик</option>
+                <option value="2">Отскок</option>
+                </select>
+            <br>
+            <label for="graph">По траектории?</label>
+            <input id="graph" type="checkbox" onchange="toggleElements1(this.checked)">
+            <br>
+            
+          </p>
+        </form>
+      </div>
+      <svg></svg>
+    </body>
+  </html>
