@@ -1,0 +1,149 @@
+/* Основные стили для body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #E0F7FA; /* Светло-голубой фон */
+  color: #01579B; /* Темно-голубой цвет текста */
+  margin: 0;
+  padding: 20px;
+}
+
+/* Стили для заголовка */
+h1 {
+  color: #0277BD; /* Средний голубой цвет */
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Стили для горизонтальной линии */
+hr {
+  border: 0;
+  height: 2px;
+  background: #01579B; /* Темно-голубой цвет */
+  margin: 20px 0;
+}
+
+/* Стили для навигационных ссылок */
+p code a {
+  color: #0288D1; /* Средний голубой цвет */
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.2em;
+}
+
+p code a:hover {
+  color: #01579B; /* Темно-голубой цвет при наведении */
+  text-decoration: underline;
+}
+
+/* Стили для основного текста */
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Стили для таблицы */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: white; /* Белый фон таблицы */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень для таблицы */
+}
+
+table th, table td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #B3E5FC; /* Светло-голубая граница */
+}
+
+table th {
+  background-color: #0288D1; /* Средний голубой цвет для заголовков */
+  color: white; /* Белый текст */
+  font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #E1F5FE; /* Светло-голубой фон для четных строк */
+}
+
+table tbody tr:hover {
+  background-color: #B3E5FC; /* Голубой фон при наведении */
+}
+
+/* Стили для details и summary */
+details {
+  margin: 20px 0;
+  background-color: white; /* Белый фон */
+  padding: 10px;
+  border: 1px solid #B3E5FC; /* Светло-голубая граница */
+  border-radius: 5px;
+  
+}
+
+summary {
+  font-weight: bold;
+  color: #0277BD; /* Средний голубой цвет */
+  cursor: pointer;
+}
+
+details form {
+  margin-top: 10px;
+}
+
+/* Стили для input и select */
+input[type="text"], input[type="number"], select {
+  padding: 8px;
+  border: 1px solid #B3E5FC; /* Светло-голубая граница */
+  border-radius: 4px;
+  margin: 5px 0;
+  width: 100%;
+  max-width: 300px;
+}
+
+input[type="button"] {
+  background-color: #0288D1; /* Средний голубой цвет */
+  color: white; /* Белый текст */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+input[type="button"]:hover {
+  background-color: #01579B; /* Темно-голубой цвет при наведении */
+}
+
+/* Стили для чекбоксов */
+input[type="checkbox"] {
+  margin-left: 10px;
+}
+
+/* Стили для кнопок сброса */
+input[type="button"][value="Сбросить фильтры"], input[type="button"][value="Сбросить сортировку"] {
+  background-color: #B3E5FC; /* Светло-голубой цвет */
+  color: #01579B; /* Темно-голубой текст */
+}
+
+input[type="button"][value="Сбросить фильтры"]:hover, input[type="button"][value="Сбросить сортировку"]:hover {
+  background-color: #80DEEA; /* Более светлый голубой цвет при наведении */
+}
+
+svg {
+  width: 1600px;
+  height: 1600px;
+  margin-bottom: 100px;
+}
+
+svg text {
+  font: 10px Verdana;
+}
+
+svg path, line {
+  fill: none;
+  stroke: #333333;
+  width: 1px;
+} 
+

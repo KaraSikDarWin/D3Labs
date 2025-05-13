@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+      <title>FEFU Dragon Race 2023</title>
+      <script src="JavaScript/data.js"></script>
+      <script src="JavaScript/main.js"></script>
+      <script src="JavaScript/table.js"></script>
+      <script src="JavaScript/filter.js"></script>
+      <script src="JavaScript/sort.js"></script>
+      <script src="JavaScript/graph.js"></script>
+      <script src="http://d3js.org/d3.v7.min.js"> </script>
+      <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body>
+      <h1>FEFU Dragon Race 2023</h1>
+      <hr size="4" color="black">
+    <p>
+	<code>
+	<a href="index.html">Главная</a>    
+	<a href="tablepage.html">FEFU Dragon Race 2023</a>
+	<a href="history.html">История спидкубинга</a>
+	</code>
+	</p>
+      <hr size="4" color="black">
+      <p> 
+        В прошлом простолюдины не могли «прикасаться» к божественному Дракону, за это могло последовать серьезное наказание.<br> 
+        Как хорошо, что мы живем в настоящем, где абсолютно каждый может прикоснуться к "FEFU Dragon Race 2023".<br>
+        Всероссийские соревнования по спидкубингу "FEFU Dragon Race 2023" состоялись 16-17 декабря 2023 года в кампусе ДВФУ. Участники соревновались в 14 официальных дисциплинах.<br>
+        По итогам соревнований получилось определить победителя, а также <b>чемпиона</b> Дальнего Востока!
+      </p>
+      <h3>Результаты первого раунда дисциплины кубик Рубика 3х3</h3>
+      
+      <table id="list" border="1" cellpadding="3">
+        <thead>
+          <tr>
+            <th>Место</th>
+            <th>Имя фамилия</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>Среднее</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+        
+      </table>
+      
+      
+      <hr size="4" color="black">
+      <details>
+        <summary>Фильтр</summary>
+        <form>
+          <p>
+          <label>Имя и фамилия:
+          <input type="text" id="fiName" name="fiName">
+          </label>
+          </p>
+          <p>
+          Среднее время: 
+          <label>от
+          <input type="number" id="numberFrom">
+        </label> 
+        
+          <label>до
+          <input type="number" id="numberTo">
+          </label>
+          </p>
+
+          <p>
+          Лучшее время: 
+          <label>от
+          <input type="number" id="bestFrom">
+        </label> 
+        <label>до
+          <input type="number" id="bestTo">
+          </label>
+          </p>
+          <input type="button" value="Отфильтровать" onclick="filterTable(data, 'list',this.form)">
+          <input type="button" value="Сбросить фильтры" onclick="resetFilter(this.form, data)">
+        </form>
+      </details>
+
+      <details>
+        <summary>Сортировка</summary>
+        <form>
+          <p>
+          <label>Первый уровень сортировки
+          <select name="firstLevel" id="firstLevel" onchange="selChang()">
+            <option value="0">Нет</option>
+            <option value="1">Имя Фамилия</option>
+            <option value="2">Среднее время</option>
+            <option value="3">Лучшее время</option>
+          </select>
+          </label>
+          по убыванию? <input  type="checkbox"  id="fieldsFirstDesc">
+          </p>
+        
+          <p>
+          <label>Второй уровень сортировки
+            <select id="secondLevel" onchange="selChang()" disabled >
+              <option value="0">Нет</option>
+            </select>
+            </label>
+            по убыванию? <input  type="checkbox"  id="fieldsSecondDesc">
+            </p>
+            <p>
+            <label>Третий уровень сортировки
+              <select id="thirdLevel" onchange="selChang()" disabled>
+                <option value="0">Нет</option>
+              </select>
+              </label>
+              по убыванию? <input  type="checkbox"  id="fieldsThirdDesc">
+              </p>
+              <input type="button" value="Сортировать" onclick="sortTable()"> 
+              <input type="button" value="Сбросить сортировку" onclick="resetSorting()">
+        </form>
+      </details>
+      <details>
+        <summary>График</summary>
+        <form>
+        <p>
+          <b>Результат</b>
+          <br>
+          <input type="checkbox" name="bstf" id="min">Лучшее время
+          <br>
+          <input type="checkbox" name="baf" id="max">Худшее время
+          <br>
+          <input type="checkbox" name="baf" id="avg">Среднее время
+          </p>
+          <p>
+            Тип графика 
+            <select>
+                <option id="dotted">Точечная диаграмма</option>
+                <option id="gisto">Гистограмма</option>
+                <option id="gra">График</option>
+            </select>
+        </p>
+        <p>
+        <input type="button" value="Построить график" onclick="plotGraph(this.form)">
+        </p>
+        </form>
+        <svg></svg>
+      </details>
+    </body>
+  </html>
